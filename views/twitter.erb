@@ -1,0 +1,10 @@
+<h2><a href="<%= @feedlink %>"><%= @feedtitle %></a></h2>
+
+<ul>
+  <% @feeditems.first(5).each do |item| %>
+    <li>
+      <b>@<%= item.author.to_str[/\w+/] %></b>: <%= item.description %> 
+    </li>
+  <% end %>
+</ul>
+
